@@ -31,5 +31,6 @@ test('Forgotten Password link is exist Or not:', async ({ page }) => {
 test('Login with the valid credentials', async ({ page }) => {
 
     loginPage.doLogin('amit.kundalkar45@gmail.com', 'Aashutosh@34');
+
 });
 
