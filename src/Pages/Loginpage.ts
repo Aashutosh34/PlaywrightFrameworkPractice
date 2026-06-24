@@ -12,6 +12,7 @@ export class Loginpage extends Basepage {
     private readonly forgottenpassword: Locator;
     private readonly loginErrorMessage: Locator;
 
+    private readonly username: Locator;
     constructor(page: Page) {
         super(page);
         this.emailid = page.getByRole('textbox', { name: 'E-Mail Address' });
@@ -19,6 +20,7 @@ export class Loginpage extends Basepage {
         this.loginbutton = page.getByRole('button', { name: 'Login' });
         this.forgottenpassword = page.getByRole('link', { name: 'Forgotten Password' });
         this.loginErrorMessage = page.locator('.alert.alert-danger.alert-dismissible');
+        this.username = page.getByRole('link', { name: 'username' });
     };
 
     //Public page actions(methods)
