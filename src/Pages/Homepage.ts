@@ -11,6 +11,8 @@ export class Homepage extends Basepage {
     private readonly search: Locator;
     private readonly searchIcon: Locator;
 
+    private readonly logo: Locator;
+
 
     //const... of the class: init the locators
     constructor(page: Page) {
@@ -19,6 +21,7 @@ export class Homepage extends Basepage {
         this.headers = page.getByRole('heading', { level: 2 });
         this.search = page.getByRole('textbox', { name: 'Search' });
         this.searchIcon = page.locator('div#search button');
+        this.logo = page.locator('.x1lliihq.x2lah0s.x1k90msu.x2h7rmj.x1qfuztq.x1fey0fg.xy7');
     };
 
     //public page actions(methods)/behaviour
