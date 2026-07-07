@@ -33,7 +33,7 @@ export default defineConfig({
     video: 'retain-on-failure',
     trace: 'on-first-retry',
     //headless: true,
-    headless: process.env.CI ? false : true,
+    headless: process.env.CI ? true : false,
   },
 
   /* Configure projects for major browsers */
