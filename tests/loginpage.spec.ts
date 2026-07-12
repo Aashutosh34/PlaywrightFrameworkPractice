@@ -14,13 +14,13 @@ test('login page title test', async ({ page }) => {
     expect(loginPageTitle).toBe('Account Login');
 });
 
-test('Forgotten Password link is exist Or not:', async ({ page }) => {
+test('@sanity Forgotten Password link is exist Or not:', async ({ page }) => {
     let loginPage = new Loginpage(page);    //(page) bcz login page class constructor says give me the page.
     await loginPage.goToLoginPage();
     expect(await loginPage.isForgottenPasswordLinkExist()).toBeTruthy();
 });
 
-test('Login with the valid credentials', async ({ page }) => {
+test('@smoke Login with the valid credentials', async ({ page }) => {
     let loginPage = new Loginpage(page);    //(page) bcz login page class constructor says give me the page.
     await loginPage.goToLoginPage();
     //loginPage.doLogin('amit.kundalkar45@gmail.com', 'Aashutosh@34');
