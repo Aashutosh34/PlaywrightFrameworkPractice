@@ -15,6 +15,7 @@ type pageFixures = {         //When you define a type for page fixtures in TypeS
 //extend playwright 'basetTest' because inbuilt 'test' will give only 4 fixures.(its like inherite concept without classes)
 //extend is method here which is allow to write any kind of custom fixures like below loginPage,homePage.
 //extend is a function which says for which object/type you really want destructurig,so here we provided generics as <pageFixures>
+//extend method says here you can write any kind of fixure here.
 export let test = baseTest.extend<pageFixures>({     // here we given 'test' name to custom we can give any other name as well like test1, test2 etc.
     //this test we are going to use in test class(spec.ts)
 
